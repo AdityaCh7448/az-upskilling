@@ -6,18 +6,25 @@ on:
       - feature/aditya/firstpractice
 
 jobs:
-
-  build-and-deploy:
+  build_ci:
     runs-on: ubuntu-latest
+
     steps:
+      # Checkout the repository (this is usually the first step)
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - uses: azure/login@v2
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+      # Set up Azure login using GitHub Secrets
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          # client-id: ${{ secrets.APPLICATION_ID }}
+          # client-secret: ${{ secrets.CLIENT_SECRET }}
+          # tenant-id: ${{ secrets.TENANT_ID }}
+          # subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-    - name: Azure CLI script
-      uses: azure/cli@v2
-      with:
-        azcliversion: latest
-        inlineScript: |
+      # You can now run Azure CLI commands or other tasks in Azure
+      - name: Run Azure CLI Command
+        run: |
           az account show
