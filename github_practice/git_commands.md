@@ -11,4 +11,5 @@
 # git push -- set upstream origin <branch name>       -- link remote repo to push the changes
 # git push                      -- pushing changes on repo
 # git pull                      -- pull code change from repo to local                      
-# git init                      -- initilize git 
+# git init                      -- initilize git
+# use above git commands on daily basis
