@@ -6,7 +6,7 @@
 # git commit -m "message"       -- commit changes
 # git branch                    -- check the branch
 # git checkout -b <branch name> -- create new branch/switch branch
-# git clone                     -- to clone the project folder
+# git clone <repo url>          -- to clone the repo in local
 # git clear                     -- clear terminal
 # git push -- set upstream origin <branch name>       -- link remote repo to push the changes
 # git push                      -- pushing changes on repo
