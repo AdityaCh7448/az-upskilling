@@ -1,2 +1,0 @@
-git lessons
-git commit -m "first commit"
