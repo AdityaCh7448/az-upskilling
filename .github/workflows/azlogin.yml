@@ -25,6 +25,6 @@ jobs:
           # subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       # You can now run Azure CLI commands or other tasks in Azure
-      - name: Run Azure CLI Commands
+      - name: Run Azure CLI Command
         run: |
           az account show
